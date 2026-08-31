@@ -73,6 +73,13 @@ jobs:
       - name: Build main + renderer bundles
         run: npm run build
 
+      # PLANO Mobile (the web/ LAN companion app) is gitignored and built to web-dist/,
+      # which electron-builder copies into the .app as resources/web. Skipping this step
+      # makes electron-builder log `file source doesn't exist ... from=.../web-dist` and
+      # ship a .dmg with a broken mobile companion — the same bug dist:mac had locally.
+      - name: Build PLANO Mobile web bundle
+        run: npm run build:web
+
       - name: Package the .dmg (no publish — the release job handles that)
         run: npx --no-install electron-builder --mac --publish never
         env:

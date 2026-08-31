@@ -20,7 +20,7 @@
     "build:web": "npm --prefix web run build",
     "dist": "npm run model && npm run icons && npm run build:web && electron-vite build && electron-builder --publish never",
     "dist:win": "npm run model && npm run icons && npm run build:web && electron-vite build && electron-builder --win --publish never",
-    "dist:mac": "npm run model && npm run icons && electron-vite build && electron-builder --mac --publish never",
+    "dist:mac": "npm run model && npm run icons && npm run build:web && electron-vite build && electron-builder --mac --publish never",
     "dist:linux": "npm run model && npm run icons && npm run build:web && electron-vite build && electron-builder --linux --publish never",
     "release": "node scripts/publish-release.mjs",
     "release:win": "npm run dist:win && node scripts/publish-release.mjs",
