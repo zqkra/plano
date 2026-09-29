@@ -28,6 +28,9 @@ subscriptions, on your own machine.
 
 </div>
 
+> [!NOTE]
+> **Status: on standby.** PLANO isn't being actively updated right now, but it is fully functional. The latest release works and you can download and use it as is.
+
 <p align="center">
   <img src="docs/media/hero-canvas.png" alt="PLANO — four agents, an editor, a browser and a to-do list on one canvas" width="100%">
 </p>
